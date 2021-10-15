@@ -4,7 +4,7 @@
  */
 package com.grupo1.asreliquiasmatematicas;
 
-import com.grupo1.asreliquiasmatematicas.ui.startScreen;
+import com.grupo1.asreliquiasmatematicas.ui.TelaStart;
 
 /**
  *
@@ -12,7 +12,7 @@ import com.grupo1.asreliquiasmatematicas.ui.startScreen;
  */
 public class Main {
     public static void main(String[] args) {
-        startScreen tela = new startScreen();
+        TelaStart tela = new TelaStart();
         tela.setVisible(true);
     }
 }

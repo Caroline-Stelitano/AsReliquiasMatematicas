@@ -26,26 +26,33 @@ public class TelaLeste extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
+        jTextArea1 = new javax.swing.JTextArea();
         btnResp1 = new javax.swing.JButton();
         btnResp2 = new javax.swing.JButton();
         btnResp3 = new javax.swing.JButton();
         btnResp4 = new javax.swing.JButton();
         lblTempo = new javax.swing.JLabel();
         lblVidas = new javax.swing.JLabel();
-        jTextArea1 = new javax.swing.JTextArea();
         btnTeste = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(800, 610));
+        setPreferredSize(new java.awt.Dimension(816, 639));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.setOpaque(false);
-        jPanel2.setPreferredSize(new java.awt.Dimension(780, 120));
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("vasco da gama ?\n");
+        jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setOpaque(false);
+        getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 450, 110));
 
         btnResp1.setBackground(new java.awt.Color(255, 255, 255));
         btnResp1.setText("muito mais");
@@ -54,6 +61,7 @@ public class TelaLeste extends javax.swing.JFrame {
                 btnResp1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnResp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, -1, 20));
 
         btnResp2.setBackground(new java.awt.Color(255, 255, 255));
         btnResp2.setText("quase nada");
@@ -62,6 +70,7 @@ public class TelaLeste extends javax.swing.JFrame {
                 btnResp2ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnResp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, -1, -1));
 
         btnResp3.setBackground(new java.awt.Color(255, 255, 255));
         btnResp3.setText("muito menos");
@@ -71,6 +80,7 @@ public class TelaLeste extends javax.swing.JFrame {
                 btnResp3ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnResp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 110, 20));
 
         btnResp4.setBackground(new java.awt.Color(255, 255, 255));
         btnResp4.setText("muita coisa");
@@ -79,74 +89,17 @@ public class TelaLeste extends javax.swing.JFrame {
                 btnResp4ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnResp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, -1, -1));
 
         lblTempo.setForeground(new java.awt.Color(255, 255, 255));
         lblTempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTempo.setText("3:00");
+        getContentPane().add(lblTempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 550, -1, -1));
 
         lblVidas.setForeground(new java.awt.Color(255, 255, 255));
         lblVidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVidas.setText("vidas");
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Um trabalho incomoda muita gente. Dois trabalhos incomodam...");
-        jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setHighlighter(null);
-        jTextArea1.setSelectionColor(new java.awt.Color(0, 0, 0));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextArea1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnResp3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(btnResp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnResp4, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                    .addComponent(btnResp2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblVidas, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(lblTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnResp2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnResp1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnResp4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblVidas)))))
-                .addContainerGap())
-        );
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, -1, -1));
+        getContentPane().add(lblVidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 500, -1, -1));
 
         btnTeste.setText("inicio voltar");
         btnTeste.addActionListener(new java.awt.event.ActionListener() {
@@ -154,35 +107,35 @@ public class TelaLeste extends javax.swing.JFrame {
                 btnTesteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnTeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
+        getContentPane().add(btnTeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Leste.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Leste.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
-        JOptionPane.showMessageDialog (null, "Se ferrou! resposta errada!");
-    }//GEN-LAST:event_btnResp4ActionPerformed
-
-    private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
-        JOptionPane.showMessageDialog (null, "Parabéns, resposta correta!");
-    }//GEN-LAST:event_btnResp1ActionPerformed
-
-    private void btnResp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp2ActionPerformed
-        JOptionPane.showMessageDialog (null, "Eu sabia que você não era de nada!");
-    }//GEN-LAST:event_btnResp2ActionPerformed
-
-    private void btnResp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp3ActionPerformed
-        JOptionPane.showMessageDialog (null, "Resposta erradaaaa! HAHA!");
-    }//GEN-LAST:event_btnResp3ActionPerformed
 
     private void btnTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTesteActionPerformed
         TelaStart teste = new TelaStart();
         teste.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnTesteActionPerformed
+
+    private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
+        JOptionPane.showMessageDialog (null, "Se ferrou! resposta errada!");
+    }//GEN-LAST:event_btnResp4ActionPerformed
+
+    private void btnResp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp3ActionPerformed
+        JOptionPane.showMessageDialog (null, "Resposta erradaaaa! HAHA!");
+    }//GEN-LAST:event_btnResp3ActionPerformed
+
+    private void btnResp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp2ActionPerformed
+        JOptionPane.showMessageDialog (null, "Eu sabia que você não era de nada!");
+    }//GEN-LAST:event_btnResp2ActionPerformed
+
+    private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
+        JOptionPane.showMessageDialog (null, "Parabéns, resposta correta!");
+    }//GEN-LAST:event_btnResp1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
@@ -191,7 +144,6 @@ public class TelaLeste extends javax.swing.JFrame {
     private javax.swing.JButton btnResp3;
     private javax.swing.JButton btnResp4;
     private javax.swing.JButton btnTeste;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblTempo;
     private javax.swing.JLabel lblVidas;

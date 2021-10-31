@@ -26,20 +26,15 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnLeste = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
+        jTextArea1 = new javax.swing.JTextArea();
+        btnLeste = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(816, 639));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnLeste.setText("Siga para o Leste");
-        btnLeste.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLesteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, 60));
 
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -47,9 +42,29 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnSairActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 540, -1, -1));
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 570, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/encruzilhada.jpg"))); // NOI18N
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Godolfredo: \"Que lugar é esse? Como vim parar aqui? Bem no dia do meu aniversário essas coisas acontecem!\"\nVoz do além: \"Grandioso Godolfredo, você será o responsável por salvar esse reino do grande mal que o assombra. Busque as relíquias matemáticas e encontrará sua volta pra casa! Siga para o Norte.\n\"\n\n");
+        jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setOpaque(false);
+        getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 760, 110));
+
+        btnLeste.setText("Siga para o Leste");
+        btnLeste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLesteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, -1, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/encruzilhada.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -104,5 +119,6 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     private javax.swing.JButton btnLeste;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

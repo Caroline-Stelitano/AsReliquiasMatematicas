@@ -95,8 +95,8 @@ public class TelaStart extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
-        TelaCidade godolfredo = new TelaCidade();
-        godolfredo.setVisible(true);
+        TelaCidade tc = new TelaCidade();
+        tc.show();
         dispose();
     }//GEN-LAST:event_btnStartActionPerformed
 
@@ -106,7 +106,7 @@ public class TelaStart extends javax.swing.JFrame {
 
     private void btnCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditosActionPerformed
         TelaCreditos creditos = new TelaCreditos();
-        creditos.setVisible(true);
+        creditos.show();
         dispose();
     }//GEN-LAST:event_btnCreditosActionPerformed
 

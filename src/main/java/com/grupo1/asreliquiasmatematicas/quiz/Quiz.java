@@ -80,4 +80,9 @@ public class Quiz {
             return false;
         }
     }
+    
+    // Retorna se o jogador perdeu o jogo
+    public boolean isGameOver() {
+        return vida == 0;
+    }
 }

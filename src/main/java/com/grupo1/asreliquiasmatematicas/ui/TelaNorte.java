@@ -33,14 +33,20 @@ public class TelaNorte extends javax.swing.JFrame {
     }
 
     private void updateScreen() {
-        boolean sucesso = quiz.update(jTextArea1, lblVidas,
-                btnResp1, btnResp2, btnResp3, btnResp4);
-        
-        if (sucesso) {
-            Game.getInstance().reliquiaNorte = true;
-            TelaSucesso ts = new TelaSucesso();
-            ts.setVisible(true);
+        if (quiz.isGameOver()) {
+            TelaGameOver tgo = new TelaGameOver();
+            tgo.setVisible(true);
             dispose();
+        } else {
+            boolean sucesso = quiz.update(jTextArea1, lblVidas,
+                    btnResp1, btnResp2, btnResp3, btnResp4);
+
+            if (sucesso) {
+                Game.getInstance().reliquiaNorte = true;
+                TelaSucesso ts = new TelaSucesso();
+                ts.setVisible(true);
+                dispose();
+            }
         }
     }
 
@@ -122,47 +128,41 @@ public class TelaNorte extends javax.swing.JFrame {
         pnQuiz.setLayout(pnQuizLayout);
         pnQuizLayout.setHorizontalGroup(
             pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnQuizLayout.createSequentialGroup()
+                .addContainerGap(443, Short.MAX_VALUE)
+                .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnResp1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnResp2, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                    .addComponent(btnResp4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblVidas)
+                .addGap(17, 17, 17))
             .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnQuizLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 3, Short.MAX_VALUE)
                     .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(20, 20, 20)
-                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnResp1)
-                        .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(25, 25, 25)
-                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnQuizLayout.createSequentialGroup()
-                            .addGap(100, 100, 100)
-                            .addComponent(lblVidas))
-                        .addComponent(btnResp2)
-                        .addComponent(btnResp4))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 330, Short.MAX_VALUE)))
         );
         pnQuizLayout.setVerticalGroup(
             pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+            .addGroup(pnQuizLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnResp2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblVidas)
+                    .addComponent(btnResp1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnResp4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(7, Short.MAX_VALUE))
             .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnQuizLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnQuizLayout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(pnQuizLayout.createSequentialGroup()
-                                    .addComponent(btnResp1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(30, 30, 30)
-                                    .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(pnQuizLayout.createSequentialGroup()
-                                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(pnQuizLayout.createSequentialGroup()
-                                            .addGap(10, 10, 10)
-                                            .addComponent(lblVidas))
-                                        .addComponent(btnResp2))
-                                    .addGap(21, 21, 21)
-                                    .addComponent(btnResp4)))))
+                    .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 

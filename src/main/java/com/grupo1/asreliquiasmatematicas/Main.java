@@ -6,13 +6,11 @@ package com.grupo1.asreliquiasmatematicas;
 
 import com.grupo1.asreliquiasmatematicas.ui.TelaStart;
 
-/**
- *
- * @author carol
- */
+
 public class Main {
     public static void main(String[] args) {
         TelaStart tela = new TelaStart();
         tela.setVisible(true);
     }
+    
 }

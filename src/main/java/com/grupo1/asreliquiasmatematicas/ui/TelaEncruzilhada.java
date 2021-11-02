@@ -4,6 +4,8 @@
  */
 package com.grupo1.asreliquiasmatematicas.ui;
 
+import com.grupo1.asreliquiasmatematicas.Game;
+
 /**
  *
  * @author carol
@@ -15,8 +17,13 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
      */
     public TelaEncruzilhada() {
         initComponents();
+        boolean mostrarBotaoSul = Game.getInstance().reliquiaLeste;
+        if (mostrarBotaoSul == false){
+            btnSul.setVisible(false);
+        }
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,6 +35,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         btnSair = new javax.swing.JButton();
         jTextArea1 = new javax.swing.JTextArea();
+        btnSul = new javax.swing.JButton();
         btnLeste = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -56,13 +64,22 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         jTextArea1.setOpaque(false);
         getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 760, 110));
 
+        btnSul.setText("Siga para o Sul");
+        btnSul.setToolTipText("");
+        btnSul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSulActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSul, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, 60));
+
         btnLeste.setText("Siga para o Leste");
         btnLeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLesteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, -1, 60));
+        getContentPane().add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, -1, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/encruzilhada.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -80,9 +97,14 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnSulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSulActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLeste;
     private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnSul;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

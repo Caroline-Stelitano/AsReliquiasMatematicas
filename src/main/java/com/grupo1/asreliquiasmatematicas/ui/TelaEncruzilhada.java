@@ -17,13 +17,24 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
      */
     public TelaEncruzilhada() {
         initComponents();
-        boolean mostrarBotaoSul = Game.getInstance().reliquiaLeste;
-        if (mostrarBotaoSul == false){
-            btnSul.setVisible(false);
+
+        boolean mostrarBotaoLeste = Game.getInstance().reliquiaNorte;
+        if (!mostrarBotaoLeste) {
+            btnLeste.setVisible(false);
+        }
+
+        boolean mostrarBotaoOeste = Game.getInstance().reliquiaLeste;
+        if (!mostrarBotaoOeste) {
+            btnOeste.setVisible(false);
         }
         
+        boolean mostrarBotaoSul = Game.getInstance().reliquiaOeste;
+        if (!mostrarBotaoSul) {
+            btnSul.setVisible(false);
+        }
+
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,17 +44,85 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextArea1 = new javax.swing.JTextArea();
+        pnButtons = new javax.swing.JPanel();
         btnNorte = new javax.swing.JButton();
         btnSul = new javax.swing.JButton();
         btnLeste = new javax.swing.JButton();
         btnOeste = new javax.swing.JButton();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(816, 639));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnButtons.setOpaque(false);
+
+        btnNorte.setText("Reino do Norte");
+        btnNorte.setToolTipText("");
+        btnNorte.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnNorte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNorteActionPerformed(evt);
+            }
+        });
+
+        btnSul.setText("Reino do Sul");
+        btnSul.setToolTipText("");
+        btnSul.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSulActionPerformed(evt);
+            }
+        });
+
+        btnLeste.setText("Reino do Leste");
+        btnLeste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLesteActionPerformed(evt);
+            }
+        });
+
+        btnOeste.setText("Reino do Oeste");
+        btnOeste.setToolTipText("");
+        btnOeste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOesteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnButtonsLayout = new javax.swing.GroupLayout(pnButtons);
+        pnButtons.setLayout(pnButtonsLayout);
+        pnButtonsLayout.setHorizontalGroup(
+            pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnButtonsLayout.createSequentialGroup()
+                .addGap(321, 321, 321)
+                .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnNorte, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(329, Short.MAX_VALUE))
+            .addGroup(pnButtonsLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+        );
+        pnButtonsLayout.setVerticalGroup(
+            pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnButtonsLayout.createSequentialGroup()
+                .addComponent(btnNorte, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(160, 160, 160)
+                .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
+                .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(pnButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 800, 440));
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
@@ -56,41 +135,6 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setOpaque(false);
         getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 760, 110));
-
-        btnNorte.setText("Norte");
-        btnNorte.setToolTipText("");
-        btnNorte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNorteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, 60));
-
-        btnSul.setText("Siga para o Sul");
-        btnSul.setToolTipText("");
-        btnSul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSulActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSul, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, 60));
-
-        btnLeste.setText("Siga para o Leste");
-        btnLeste.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLesteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, -1, 60));
-
-        btnOeste.setText("Oeste");
-        btnOeste.setToolTipText("");
-        btnOeste.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOesteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnOeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/encruzilhada.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -129,5 +173,6 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     private javax.swing.JButton btnSul;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JPanel pnButtons;
     // End of variables declaration//GEN-END:variables
 }

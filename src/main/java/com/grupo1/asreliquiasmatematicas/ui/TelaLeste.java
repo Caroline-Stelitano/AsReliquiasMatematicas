@@ -31,7 +31,7 @@ public class TelaLeste extends javax.swing.JFrame {
 
             if (sucesso) {
                 Game.getInstance().reliquiaLeste = true;
-                TelaSucesso ts = new TelaSucesso();
+                TelaSucesso ts = new TelaSucesso("Leste");
                 ts.setVisible(true);
                 dispose();
             }

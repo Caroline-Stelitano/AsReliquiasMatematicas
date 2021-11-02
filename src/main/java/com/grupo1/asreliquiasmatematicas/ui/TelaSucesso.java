@@ -13,8 +13,26 @@ public class TelaSucesso extends javax.swing.JFrame {
     /**
      * Creates new form TelaSucesso
      */
-    public TelaSucesso() {
+    public TelaSucesso(String local) {
         initComponents();
+        
+        String mensagem;
+        switch (local) {
+            case "Norte":
+                mensagem = "Parabéns!\nVocê adquiriu a relíquia do norte.";
+                break;
+            case "Leste":
+                mensagem = "Parabéns!\nVocê adquiriu a relíquia do leste.";
+                break;
+            case "Oeste":
+                mensagem = "Parabéns!\nVocê adquiriu a relíquia do oeste.";
+                break;
+            default:
+                mensagem = "Parabéns!\nVocê adquiriu a relíquia do sul.";
+                break;
+        }
+        
+        lblSucesso.setText(mensagem);
     }
 
     /**
@@ -27,14 +45,18 @@ public class TelaSucesso extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblSucesso = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(819, 600));
+        setMinimumSize(new java.awt.Dimension(819, 600));
 
-        jLabel1.setText("jLabel1");
+        lblSucesso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSucesso.setText("jLabel1");
+        lblSucesso.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Voltar para a encruzilhada");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -46,23 +68,22 @@ public class TelaSucesso extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(185, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(181, 181, 181))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(67, 67, 67))))
+                .addContainerGap(77, Short.MAX_VALUE)
+                .addComponent(lblSucesso, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(305, 305, 305)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGap(70, 70, 70)
+                .addComponent(lblSucesso)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 429, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(35, 35, 35))
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,14 +136,14 @@ public class TelaSucesso extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaSucesso().setVisible(true);
+                new TelaSucesso("Norte").setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblSucesso;
     // End of variables declaration//GEN-END:variables
 }

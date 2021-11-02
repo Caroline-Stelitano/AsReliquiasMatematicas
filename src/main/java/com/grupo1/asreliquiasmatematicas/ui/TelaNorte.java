@@ -43,7 +43,7 @@ public class TelaNorte extends javax.swing.JFrame {
 
             if (sucesso) {
                 Game.getInstance().reliquiaNorte = true;
-                TelaSucesso ts = new TelaSucesso();
+                TelaSucesso ts = new TelaSucesso("Norte");
                 ts.setVisible(true);
                 dispose();
             }

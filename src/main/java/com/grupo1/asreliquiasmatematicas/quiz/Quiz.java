@@ -28,8 +28,7 @@ public class Quiz {
                 quiz = QuizTelaLeste.buildQuiz();
                 break;
             case "Norte":
-                // TODO: trocar
-                quiz = QuizTelaLeste.buildQuiz();
+                quiz = QuizTelaNorte.buildQuiz();
                 break;
             case "Sul":
                 // TODO: trocar

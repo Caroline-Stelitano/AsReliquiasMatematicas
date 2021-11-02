@@ -5,26 +5,43 @@
 package com.grupo1.asreliquiasmatematicas.ui;
 
 import com.grupo1.asreliquiasmatematicas.Dialogos;
-
+import com.grupo1.asreliquiasmatematicas.Game;
+import com.grupo1.asreliquiasmatematicas.quiz.Quiz;
 
 public class TelaNorte extends javax.swing.JFrame {
+
     Dialogos dialogos = new Dialogos();
     int dialogoAtual = -1;
+
+    Quiz quiz = new Quiz("Norte");
+
+    public TelaNorte() {
+        initComponents();
+        pnQuiz.setVisible(false);
+        proximoDialogo();
+    }
 
     private void proximoDialogo() {
         dialogoAtual++;
         if (dialogoAtual == dialogos.norte.length) {
             pnDialogo.setVisible(false);
             pnQuiz.setVisible(true);
+            updateScreen();
         } else {
             cxDialogo.setText(dialogos.norte[dialogoAtual]);
         }
     }
 
-    public TelaNorte() {
-        initComponents();
-        pnQuiz.setVisible(false);
-        proximoDialogo();
+    private void updateScreen() {
+        boolean sucesso = quiz.update(jTextArea1, lblVidas,
+                btnResp1, btnResp2, btnResp3, btnResp4);
+        
+        if (sucesso) {
+            Game.getInstance().reliquiaNorte = true;
+            TelaSucesso ts = new TelaSucesso();
+            ts.setVisible(true);
+            dispose();
+        }
     }
 
     /**
@@ -37,7 +54,12 @@ public class TelaNorte extends javax.swing.JFrame {
     private void initComponents() {
 
         pnQuiz = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jTextArea1 = new javax.swing.JTextArea();
+        btnResp1 = new javax.swing.JButton();
+        btnResp2 = new javax.swing.JButton();
+        btnResp3 = new javax.swing.JButton();
+        btnResp4 = new javax.swing.JButton();
+        lblVidas = new javax.swing.JLabel();
         pnDialogo = new javax.swing.JPanel();
         btnNext = new javax.swing.JButton();
         cxDialogo = new javax.swing.JTextArea();
@@ -48,31 +70,103 @@ public class TelaNorte extends javax.swing.JFrame {
 
         pnQuiz.setOpaque(false);
 
-        jLabel1.setText("jLabel1");
-        jLabel1.setOpaque(true);
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("vasco da gama ?\n");
+        jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setOpaque(false);
+
+        btnResp1.setBackground(new java.awt.Color(255, 255, 255));
+        btnResp1.setText("muito mais");
+        btnResp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResp1ActionPerformed(evt);
+            }
+        });
+
+        btnResp2.setBackground(new java.awt.Color(255, 255, 255));
+        btnResp2.setText("quase nada");
+        btnResp2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResp2ActionPerformed(evt);
+            }
+        });
+
+        btnResp3.setBackground(new java.awt.Color(255, 255, 255));
+        btnResp3.setText("muito menos");
+        btnResp3.setPreferredSize(new java.awt.Dimension(115, 29));
+        btnResp3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResp3ActionPerformed(evt);
+            }
+        });
+
+        btnResp4.setBackground(new java.awt.Color(255, 255, 255));
+        btnResp4.setText("muita coisa");
+        btnResp4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResp4ActionPerformed(evt);
+            }
+        });
+
+        lblVidas.setForeground(new java.awt.Color(255, 255, 255));
+        lblVidas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVidas.setText("vidas");
 
         javax.swing.GroupLayout pnQuizLayout = new javax.swing.GroupLayout(pnQuiz);
         pnQuiz.setLayout(pnQuizLayout);
         pnQuizLayout.setHorizontalGroup(
             pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 780, Short.MAX_VALUE)
             .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnQuizLayout.createSequentialGroup()
-                    .addGap(0, 367, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(0, 368, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(20, 20, 20)
+                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnResp1)
+                        .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(25, 25, 25)
+                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnQuizLayout.createSequentialGroup()
+                            .addGap(100, 100, 100)
+                            .addComponent(lblVidas))
+                        .addComponent(btnResp2)
+                        .addComponent(btnResp4))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         pnQuizLayout.setVerticalGroup(
             pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
             .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnQuizLayout.createSequentialGroup()
-                    .addGap(0, 117, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGap(0, 117, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnQuizLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pnQuizLayout.createSequentialGroup()
+                                    .addComponent(btnResp1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(30, 30, 30)
+                                    .addComponent(btnResp3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnQuizLayout.createSequentialGroup()
+                                    .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(pnQuizLayout.createSequentialGroup()
+                                            .addGap(10, 10, 10)
+                                            .addComponent(lblVidas))
+                                        .addComponent(btnResp2))
+                                    .addGap(21, 21, 21)
+                                    .addComponent(btnResp4)))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, 250));
+        getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, 120));
 
         pnDialogo.setOpaque(false);
 
@@ -132,6 +226,26 @@ public class TelaNorte extends javax.swing.JFrame {
         proximoDialogo();
     }//GEN-LAST:event_btnNextActionPerformed
 
+    private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
+        quiz.responder("1");
+        updateScreen();
+    }//GEN-LAST:event_btnResp1ActionPerformed
+
+    private void btnResp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp2ActionPerformed
+        quiz.responder("2");
+        updateScreen();
+    }//GEN-LAST:event_btnResp2ActionPerformed
+
+    private void btnResp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp3ActionPerformed
+        quiz.responder("3");
+        updateScreen();
+    }//GEN-LAST:event_btnResp3ActionPerformed
+
+    private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
+        quiz.responder("4");
+        updateScreen();
+    }//GEN-LAST:event_btnResp4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -170,8 +284,13 @@ public class TelaNorte extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnResp1;
+    private javax.swing.JButton btnResp2;
+    private javax.swing.JButton btnResp3;
+    private javax.swing.JButton btnResp4;
     private javax.swing.JTextArea cxDialogo;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblVidas;
     private javax.swing.JPanel pnDialogo;
     private javax.swing.JPanel pnQuiz;
     // End of variables declaration//GEN-END:variables

@@ -43,7 +43,6 @@ public class TelaLeste extends javax.swing.JFrame {
         btnResp4 = new javax.swing.JButton();
         lblTempo = new javax.swing.JLabel();
         lblVidas = new javax.swing.JLabel();
-        btnTeste = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -110,25 +109,11 @@ public class TelaLeste extends javax.swing.JFrame {
         lblVidas.setText("vidas");
         getContentPane().add(lblVidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 500, -1, -1));
 
-        btnTeste.setText("inicio voltar");
-        btnTeste.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTesteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnTeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
-
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Leste.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTesteActionPerformed
-        TelaStart teste = new TelaStart();
-        teste.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnTesteActionPerformed
 
     private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
         quiz.responder("4");
@@ -156,7 +141,6 @@ public class TelaLeste extends javax.swing.JFrame {
     private javax.swing.JButton btnResp2;
     private javax.swing.JButton btnResp3;
     private javax.swing.JButton btnResp4;
-    private javax.swing.JButton btnTeste;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblTempo;
     private javax.swing.JLabel lblVidas;

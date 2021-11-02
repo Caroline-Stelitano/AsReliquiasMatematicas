@@ -29,19 +29,6 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnSair">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sair"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
-      </Events>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="740" y="570" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Component class="javax.swing.JTextArea" name="jTextArea1">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
@@ -57,13 +44,27 @@
         </Property>
         <Property name="lineWrap" type="boolean" value="true"/>
         <Property name="rows" type="int" value="5"/>
-        <Property name="text" type="java.lang.String" value="Godolfredo: &quot;Que lugar &#xe9; esse? Como vim parar aqui? Bem no dia do meu anivers&#xe1;rio essas coisas acontecem!&quot;&#xa;Voz do al&#xe9;m: &quot;Grandioso Godolfredo, voc&#xea; ser&#xe1; o respons&#xe1;vel por salvar esse reino do grande mal que o assombra. Busque as rel&#xed;quias matem&#xe1;ticas e encontrar&#xe1; sua volta pra casa! Siga para o Norte.&#xa;&quot;&#xa;&#xa;"/>
+        <Property name="text" type="java.lang.String" value="Godolfredo: &quot;Que lugar &#xe9; esse? Como vim parar aqui? Bem no dia do meu anivers&#xe1;rio essas coisas acontecem!&quot;&#xa;&#xa;Voz do al&#xe9;m: &quot;Grandioso Godolfredo, voc&#xea; ser&#xe1; o respons&#xe1;vel por salvar esse reino do grande mal que o assombra. Busque as rel&#xed;quias matem&#xe1;ticas e encontrar&#xe1; sua volta pra casa! Siga para o Norte.&quot;&#xa;&#xa;"/>
         <Property name="wrapStyleWord" type="boolean" value="true"/>
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="20" y="480" width="760" height="110"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnNorte">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Norte"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNorteActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="350" y="30" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -77,7 +78,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="400" width="-1" height="60"/>
+          <AbsoluteConstraints x="320" y="390" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -90,7 +91,21 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="660" y="400" width="-1" height="60"/>
+          <AbsoluteConstraints x="630" y="190" width="-1" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnOeste">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Oeste"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOesteActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="200" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>

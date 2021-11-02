@@ -52,7 +52,7 @@ public class TelaLeste extends javax.swing.JFrame {
         jTextArea1.setText("vasco da gama ?\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setOpaque(false);
-        getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 450, 110));
+        getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 450, 110));
 
         btnResp1.setBackground(new java.awt.Color(255, 255, 255));
         btnResp1.setText("muito mais");

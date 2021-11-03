@@ -26,6 +26,7 @@ public class TelaStart extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         btnStart = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
@@ -37,6 +38,9 @@ public class TelaStart extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(816, 639));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nomeFinal.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 620, 60));
 
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(577, 60));
@@ -122,6 +126,7 @@ public class TelaStart extends javax.swing.JFrame {
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnStart;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,46 +8,10 @@ import com.grupo1.asreliquiasmatematicas.Dialogos;
 import com.grupo1.asreliquiasmatematicas.Game;
 import com.grupo1.asreliquiasmatematicas.quiz.Quiz;
 
-public class TelaNorte extends javax.swing.JFrame {
-
-    Dialogos dialogos = new Dialogos();
-    int dialogoAtual = -1;
-
-    Quiz quiz = new Quiz("Norte");
-
-    public TelaNorte() {
+public class TelaSul extends javax.swing.JFrame {
+    
+    public TelaSul() {
         initComponents();
-        pnQuiz.setVisible(false);
-        proximoDialogo();
-    }
-
-    private void proximoDialogo() {
-        dialogoAtual++;
-        if (dialogoAtual == dialogos.norte.length) {
-            pnDialogo.setVisible(false);
-            pnQuiz.setVisible(true);
-            updateScreen();
-        } else {
-            cxDialogo.setText(dialogos.norte[dialogoAtual]);
-        }
-    }
-
-    private void updateScreen() {
-        if (quiz.isGameOver()) {
-            TelaGameOver tgo = new TelaGameOver();
-            tgo.setVisible(true);
-            dispose();
-        } else {
-            boolean sucesso = quiz.update(jTextArea1, lblVidas,
-                    btnResp1, btnResp2, btnResp3, btnResp4);
-
-            if (sucesso) {
-                Game.getInstance().reliquiaNorte = true;
-                TelaSucesso ts = new TelaSucesso("Norte");
-                ts.setVisible(true);
-                dispose();
-            }
-        }
     }
 
     /**
@@ -72,6 +36,8 @@ public class TelaNorte extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(816, 636));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnQuiz.setOpaque(false);
@@ -205,46 +171,41 @@ public class TelaNorte extends javax.swing.JFrame {
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnDialogoLayout.createSequentialGroup()
                 .addComponent(btnNext)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
-                    .addContainerGap(48, Short.MAX_VALUE)
+                    .addContainerGap(43, Short.MAX_VALUE)
                     .addComponent(cxDialogo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
         getContentPane().add(pnDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 780, 160));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Norte.png"))); // NOI18N
-        background.setMaximumSize(new java.awt.Dimension(819, 600));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Sul.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        proximoDialogo();
-    }//GEN-LAST:event_btnNextActionPerformed
-
     private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
-        quiz.responder("1");
-        updateScreen();
+       
     }//GEN-LAST:event_btnResp1ActionPerformed
 
     private void btnResp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp2ActionPerformed
-        quiz.responder("2");
-        updateScreen();
+        
     }//GEN-LAST:event_btnResp2ActionPerformed
 
     private void btnResp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp3ActionPerformed
-        quiz.responder("3");
-        updateScreen();
+        
     }//GEN-LAST:event_btnResp3ActionPerformed
 
     private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
-        quiz.responder("4");
-        updateScreen();
+        
     }//GEN-LAST:event_btnResp4ActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+     
+    }//GEN-LAST:event_btnNextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,20 +224,20 @@ public class TelaNorte extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaNorte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSul.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaNorte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSul.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaNorte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSul.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaNorte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSul.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaNorte().setVisible(true);
+                new TelaSul().setVisible(true);
             }
         });
     }

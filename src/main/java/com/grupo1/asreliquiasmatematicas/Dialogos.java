@@ -22,7 +22,10 @@ public class Dialogos {
 
     public String[] norte = {
         "Godolfredo: \nEUCLIDES? Você é um intelectual desse mundo? O que você está fazendo aqui?",
-        "Euclides: \nEuclides? Não é mais ele que habita esse corpo! HAHAHA! Além do mais, quem é você, mero mesquinho? Hahaha!"
+        "Euclides: \nEuclides? Não é mais ele que habita esse corpo! HAHAHA! Além do mais, quem é você, mero mesquinho? Hahaha!"};
 
-    };
+    public String [] sul = {
+        "Godolfredo: \nISAAC NEWTON? Isso só tá melhorando! Se apresente quem está controlando Newton!",
+        "Newton: \nQuem ousa me dar uma ordem? Só pode ser aquele que Robotinik me avisou que viria salvar os intelectuais… Não vai achando que só porque passou do quiz de Robotinik que também passará no meu! Pegue o meu quiz, mesquinho.",
+        "Newton: \nSó o Robotinik para fazer um quiz tão ruim para um mesquinho como você conseguir passar."};
 }

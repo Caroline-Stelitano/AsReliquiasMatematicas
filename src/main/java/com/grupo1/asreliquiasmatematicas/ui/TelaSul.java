@@ -224,27 +224,27 @@ public class TelaSul extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
-       proximoDialogo();
+        quiz.responder("1");
+        updateScreen();
     }//GEN-LAST:event_btnResp1ActionPerformed
 
     private void btnResp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp2ActionPerformed
-        quiz.responder("1");
+        quiz.responder("2");
         updateScreen();
     }//GEN-LAST:event_btnResp2ActionPerformed
 
     private void btnResp3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp3ActionPerformed
-        quiz.responder("2");
+        quiz.responder("3");
         updateScreen();
     }//GEN-LAST:event_btnResp3ActionPerformed
 
     private void btnResp4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp4ActionPerformed
-        quiz.responder("3");
+        quiz.responder("4");
         updateScreen();
     }//GEN-LAST:event_btnResp4ActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        quiz.responder("4");
-        updateScreen();
+        proximoDialogo();
     }//GEN-LAST:event_btnNextActionPerformed
 
     /**

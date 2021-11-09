@@ -10,10 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
-/**
- *
- * @author carol
- */
 public class Quiz {
 
     String[][] quiz;
@@ -31,12 +27,14 @@ public class Quiz {
                 quiz = QuizTelaNorte.buildQuiz();
                 break;
             case "Sul":
+                quiz = QuizTelaSul.buildQuiz();
+                break;
+            case "Oeste":
                 // TODO: trocar
                 quiz = QuizTelaLeste.buildQuiz();
                 break;
-            default:
-                // TODO: trocar
-                quiz = QuizTelaLeste.buildQuiz();
+            case "BossFinal":
+                quiz = QuizTelaBossFinal.buildQuiz();
                 break;
         }
 

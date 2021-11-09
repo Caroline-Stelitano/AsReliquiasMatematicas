@@ -4,10 +4,6 @@
  */
 package com.grupo1.asreliquiasmatematicas;
 
-/**
- *
- * @author carol
- */
 public class Dialogos {
 
     public String[] taverna = {
@@ -22,10 +18,29 @@ public class Dialogos {
 
     public String[] norte = {
         "Godolfredo: \nEUCLIDES? Você é um intelectual desse mundo? O que você está fazendo aqui?",
-        "Euclides: \nEuclides? Não é mais ele que habita esse corpo! HAHAHA! Além do mais, quem é você, mero mesquinho? Hahaha!"};
+        "Euclides: \nEuclides? Não é mais ele que habita esse corpo! HAHAHA! Além do mais, quem é você, mero mesquinho? Hahaha!",
+        "Godolfredo: \nEu sou Godolfredo, e vim do Planeta Terra.",
+        "Euclides: \nQuem é Godolfredo na fila do pão? HAHAHAHAH! Prove seu valor por meio desse quiz matemático e soltarei Euclides!",};
 
+    public String[] leste = {
+        "Godolfredo: \nNão pode ser… RENÉ DESCARTES? Eu lhe salvarei de quem o está controlando!",
+        "Descartes: \nSinto lhe dizer, caro burrinho, mas do meu teste você não passará como o dos outros. Você encontrou o MAIOR DE TODOS!",
+        "Godolfredo: \nVamos ver se você é tudo isso mesmo então. Eu lhe salvarei, Descartes!",};
+    
     public String [] sul = {
         "Godolfredo: \nISAAC NEWTON? Isso só tá melhorando! Se apresente quem está controlando Newton!",
         "Newton: \nQuem ousa me dar uma ordem? Só pode ser aquele que Robotinik me avisou que viria salvar os intelectuais… Não vai achando que só porque passou do quiz de Robotinik que também passará no meu! Pegue o meu quiz, mesquinho.",
         "Newton: \nSó o Robotinik para fazer um quiz tão ruim para um mesquinho como você conseguir passar."};
+    
+    public String[] bossFinal = {
+        "\nÉ de se perceber que o céu está mais escuro. A escuridão tomou conta do reino. Tudo parece estar um caos...",
+        "\nGodolfredo percebe que um caminho foi aberto, um caminho que não existia. Ao fundo é possível ver um castelo. Ali é onde está Argus e onde Pitágoras está aprisionado.",
+        "\nNa entrada do castelo Godolfredo avista Glados, Bowser, Robotinik, e Nemesis. Todos estão ali para lhe levar até Argus. No pátio do castelo estão Argus e Pitágoras, acorrentado e fraco.",
+        "Godolfredo: \nEU PASSAREI PELO SEU TESTE ARGUS! SALVAREI PITÁGORAS E VOLTAREI PARA CASA!",
+        "Argus: \nSeu suposto salvador chegou, Pitágoras. Você o vê?",
+        "Godolfredo: \nPITÁGORAS, VOCÊ SERÁ SALVO PELAS MÃOS E CÉREBRO DE GODOLFREDO. ARGUS, LIBERTE-O, AGORA!",
+        "Argus: \nEntão este é o tal do Godolfredo… Já ouvi muito o seu nome e o caos que você causou com meus ajudantes, mas saiba que de mim o nível será mais baixo. Se prepare mentalmente, pois você terá pela frente o quiz do GRANDE ARGUS!",
+        "Glados, Bowser, Robotinik, e Nemesis: VOCÊ VAI PERDER, LOOSER! HAHAHA!",
+        "Godolfredo: \nMal espero para ver esse teste na minha frente! Me entregue logo! Tirarei de letra esse quiz! Estou mais preparado do que nunca!",};
+     
 }

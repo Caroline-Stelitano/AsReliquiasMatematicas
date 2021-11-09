@@ -20,18 +20,22 @@ public class TelaSucesso extends javax.swing.JFrame {
         switch (local) {
             case "Norte":
                 mensagem = "Parabéns!\nVocê adquiriu a relíquia do norte.";
+                // trocar a imagem
                 break;
             case "Leste":
                 mensagem = "Parabéns!\nVocê adquiriu a relíquia do leste.";
+                // trocar a imagem
                 break;
             case "Oeste":
                 mensagem = "Parabéns!\nVocê adquiriu a relíquia do oeste.";
+                // trocar a imagem
                 break;
             default:
                 mensagem = "Parabéns!\nVocê adquiriu a relíquia do sul.";
+                // trocar a imagem
                 break;
         }
-        
+        //ALTERAR MSG DE ULTIMA RELIQUIA DO BOSS???
         lblSucesso.setText(mensagem);
     }
 
@@ -53,7 +57,7 @@ public class TelaSucesso extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(819, 600));
 
         lblSucesso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSucesso.setText("jLabel1");
+        lblSucesso.setText("lblSucesso");
         lblSucesso.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButton1.setText("Voltar para a encruzilhada");

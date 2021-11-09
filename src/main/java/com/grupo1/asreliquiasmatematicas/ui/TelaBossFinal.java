@@ -8,42 +8,42 @@ import com.grupo1.asreliquiasmatematicas.Dialogos;
 import com.grupo1.asreliquiasmatematicas.Game;
 import com.grupo1.asreliquiasmatematicas.quiz.Quiz;
 
-public class TelaSul extends javax.swing.JFrame {
-    
+public class TelaBossFinal extends javax.swing.JFrame {
+
     Dialogos dialogos = new Dialogos();
     int dialogoAtual = -1;
-    
-    Quiz quiz = new Quiz("Sul");
-    
-    public TelaSul() {
+
+    Quiz quiz = new Quiz("BossFinal");
+
+    public TelaBossFinal() {
         initComponents();
         pnQuiz.setVisible(false);
         proximoDialogo();
     }
-    
+
     private void proximoDialogo() {
         dialogoAtual++;
-        if (dialogoAtual == dialogos.sul.length) {
+        if (dialogoAtual == dialogos.bossFinal.length) {
             pnDialogo.setVisible(false);
             pnQuiz.setVisible(true);
             updateScreen();
         } else {
-            cxDialogo.setText(dialogos.norte[dialogoAtual]);
+            cxDialogo.setText(dialogos.bossFinal[dialogoAtual]);
         }
     }
-  
+
     private void updateScreen() {
         if (quiz.isGameOver()) {
             TelaGameOver tgo = new TelaGameOver();
             tgo.setVisible(true);
             dispose();
         } else {
-            boolean sucesso = quiz.update (jTextArea1, lblVidas,
-                    btnResp1, btnResp2, btnResp3, btnResp4) ;
-            
+            boolean sucesso = quiz.update(jTextArea1, lblVidas,
+                    btnResp1, btnResp2, btnResp3, btnResp4);
+//ALTERAR ESSA TELA PARA O FINAL DO JOGO??
             if (sucesso) {
                 Game.getInstance().reliquiaSul = true;
-                TelaSucesso ts = new TelaSucesso("Sul");
+                TelaSucesso ts = new TelaSucesso("de Nuzeilaond");
                 ts.setVisible(true);
                 dispose();
             }
@@ -72,8 +72,6 @@ public class TelaSul extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(816, 636));
-        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnQuiz.setOpaque(false);
@@ -207,21 +205,26 @@ public class TelaSul extends javax.swing.JFrame {
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnDialogoLayout.createSequentialGroup()
                 .addComponent(btnNext)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
-                    .addContainerGap(43, Short.MAX_VALUE)
+                    .addContainerGap(48, Short.MAX_VALUE)
                     .addComponent(cxDialogo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
         getContentPane().add(pnDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 780, 160));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Sul.png"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Boss Final.png"))); // NOI18N
+        background.setMaximumSize(new java.awt.Dimension(819, 600));
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        proximoDialogo();
+    }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
         quiz.responder("1");
@@ -242,10 +245,6 @@ public class TelaSul extends javax.swing.JFrame {
         quiz.responder("4");
         updateScreen();
     }//GEN-LAST:event_btnResp4ActionPerformed
-
-    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        proximoDialogo();
-    }//GEN-LAST:event_btnNextActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;

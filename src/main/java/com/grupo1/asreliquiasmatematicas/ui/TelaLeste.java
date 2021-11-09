@@ -4,20 +4,32 @@
  */
 package com.grupo1.asreliquiasmatematicas.ui;
 
+import com.grupo1.asreliquiasmatematicas.Dialogos;
 import com.grupo1.asreliquiasmatematicas.Game;
 import com.grupo1.asreliquiasmatematicas.quiz.Quiz;
 
-/**
- *
- * @author carol
- */
 public class TelaLeste extends javax.swing.JFrame {
 
+    Dialogos dialogos = new Dialogos();
+    int dialogoAtual = -1;
+    
     Quiz quiz = new Quiz("Leste");
 
     public TelaLeste() {
         initComponents();
-        updateScreen();
+        pnQuiz.setVisible(false);
+        proximoDialogo();
+    }
+    
+    private void proximoDialogo() {
+        dialogoAtual++;
+        if (dialogoAtual == dialogos.leste.length) {
+            pnDialogo.setVisible(false);
+            pnQuiz.setVisible(true);
+            updateScreen();
+        } else {
+            cxDialogo.setText(dialogos.leste[dialogoAtual]);
+        }
     }
 
     public void updateScreen() {
@@ -49,6 +61,9 @@ public class TelaLeste extends javax.swing.JFrame {
         btnResp3 = new javax.swing.JButton();
         btnResp4 = new javax.swing.JButton();
         lblVidas = new javax.swing.JLabel();
+        pnDialogo = new javax.swing.JPanel();
+        btnNext = new javax.swing.JButton();
+        cxDialogo = new javax.swing.JTextArea();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -150,6 +165,53 @@ public class TelaLeste extends javax.swing.JFrame {
 
         getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, 120));
 
+        pnDialogo.setOpaque(false);
+
+        btnNext.setText(">");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
+
+        cxDialogo.setEditable(false);
+        cxDialogo.setBackground(new java.awt.Color(0, 0, 0));
+        cxDialogo.setColumns(20);
+        cxDialogo.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        cxDialogo.setForeground(new java.awt.Color(255, 255, 51));
+        cxDialogo.setLineWrap(true);
+        cxDialogo.setRows(5);
+        cxDialogo.setText("text");
+        cxDialogo.setWrapStyleWord(true);
+        cxDialogo.setOpaque(false);
+
+        javax.swing.GroupLayout pnDialogoLayout = new javax.swing.GroupLayout(pnDialogo);
+        pnDialogo.setLayout(pnDialogoLayout);
+        pnDialogoLayout.setHorizontalGroup(
+            pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
+                .addGap(0, 705, Short.MAX_VALUE)
+                .addComponent(btnNext))
+            .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cxDialogo, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+        pnDialogoLayout.setVerticalGroup(
+            pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnDialogoLayout.createSequentialGroup()
+                .addComponent(btnNext)
+                .addContainerGap(131, Short.MAX_VALUE))
+            .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
+                    .addContainerGap(48, Short.MAX_VALUE)
+                    .addComponent(cxDialogo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+
+        getContentPane().add(pnDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 780, 160));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reino Leste.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
@@ -176,14 +238,21 @@ public class TelaLeste extends javax.swing.JFrame {
         updateScreen();
     }//GEN-LAST:event_btnResp4ActionPerformed
 
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        proximoDialogo();
+    }//GEN-LAST:event_btnNextActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
+    private javax.swing.JButton btnNext;
     private javax.swing.JButton btnResp1;
     private javax.swing.JButton btnResp2;
     private javax.swing.JButton btnResp3;
     private javax.swing.JButton btnResp4;
+    private javax.swing.JTextArea cxDialogo;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblVidas;
+    private javax.swing.JPanel pnDialogo;
     private javax.swing.JPanel pnQuiz;
     // End of variables declaration//GEN-END:variables
 }

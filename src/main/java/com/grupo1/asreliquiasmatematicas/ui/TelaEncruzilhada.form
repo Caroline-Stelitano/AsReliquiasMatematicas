@@ -42,18 +42,18 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btnOeste" min="-2" pref="150" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                          <Component id="btnBossFinal" min="-2" pref="150" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="btnNorte" min="-2" pref="150" max="-2" attributes="0"/>
                       <Component id="btnSul" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="329" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="btnOeste" min="-2" pref="150" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="149" max="32767" attributes="0"/>
                   <Component id="btnLeste" min="-2" pref="150" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
@@ -67,6 +67,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnOeste" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnLeste" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btnBossFinal" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="154" max="32767" attributes="0"/>
                   <Component id="btnSul" min="-2" pref="40" max="-2" attributes="0"/>
@@ -111,6 +112,15 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOesteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnBossFinal">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Boss Final"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBossFinalActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

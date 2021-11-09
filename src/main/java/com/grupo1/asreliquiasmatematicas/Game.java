@@ -4,10 +4,6 @@
  */
 package com.grupo1.asreliquiasmatematicas;
 
-/**
- *
- * @author renat
- */
 public class Game {
 
     private static Game instance;
@@ -18,9 +14,10 @@ public class Game {
         }
         return instance;
     }
-    public boolean reliquiaLeste = false;
-    public boolean reliquiaNorte = false;
-    public boolean reliquiaSul = false;
-    public boolean reliquiaOeste = false;
+    public boolean reliquiaLeste = true;
+    public boolean reliquiaNorte = true;
+    public boolean reliquiaSul = true;
+    public boolean reliquiaOeste = true; 
+//    COLOCAR TUDO FALSE NO FUNCIONAMENTO DO JOGO
 
 }

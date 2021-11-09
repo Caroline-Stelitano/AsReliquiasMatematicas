@@ -32,6 +32,11 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         if (!mostrarBotaoSul) {
             btnSul.setVisible(false);
         }
+        
+        boolean mostrarBotaoBossFinal = Game.getInstance().reliquiaSul;
+        if (!mostrarBotaoBossFinal) {
+            btnBossFinal.setVisible(false);
+        }
 
     }
 
@@ -49,6 +54,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnSul = new javax.swing.JButton();
         btnLeste = new javax.swing.JButton();
         btnOeste = new javax.swing.JButton();
+        btnBossFinal = new javax.swing.JButton();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
@@ -92,20 +98,28 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
             }
         });
 
+        btnBossFinal.setText("Boss Final");
+        btnBossFinal.setToolTipText("");
+        btnBossFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBossFinalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnButtonsLayout = new javax.swing.GroupLayout(pnButtons);
         pnButtons.setLayout(pnButtonsLayout);
         pnButtonsLayout.setHorizontalGroup(
             pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnButtonsLayout.createSequentialGroup()
-                .addGap(321, 321, 321)
+                .addGap(32, 32, 32)
                 .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnButtonsLayout.createSequentialGroup()
+                        .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(139, 139, 139)
+                        .addComponent(btnBossFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnNorte, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(329, Short.MAX_VALUE))
-            .addGroup(pnButtonsLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
                 .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -116,7 +130,8 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 .addGap(160, 160, 160)
                 .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBossFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -149,9 +164,9 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLesteActionPerformed
 
     private void btnSulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSulActionPerformed
-//        TelaSul sul = new TelaSul();
-//        sul.setVisible(true);
-//        dispose();
+        TelaSul sul = new TelaSul();
+        sul.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnSulActionPerformed
 
     private void btnNorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNorteActionPerformed
@@ -166,7 +181,14 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 //        dispose();
     }//GEN-LAST:event_btnOesteActionPerformed
 
+    private void btnBossFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBossFinalActionPerformed
+        TelaBossFinal bossFinal = new TelaBossFinal();
+        bossFinal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBossFinalActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBossFinal;
     private javax.swing.JButton btnLeste;
     private javax.swing.JButton btnNorte;
     private javax.swing.JButton btnOeste;

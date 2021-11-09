@@ -4,7 +4,7 @@
  */
 package com.grupo1.asreliquiasmatematicas.quiz;
 
-public class QuizTelaLeste {
+public class QuizTelaBossFinal {
 
     public static String[][] buildQuiz() {
         String[][] quiz = new String[10][6];

@@ -28,7 +28,7 @@ public class TelaSul extends javax.swing.JFrame {
             pnQuiz.setVisible(true);
             updateScreen();
         } else {
-            cxDialogo.setText(dialogos.norte[dialogoAtual]);
+            cxDialogo.setText(dialogos.sul[dialogoAtual]);
         }
     }
   
@@ -72,7 +72,7 @@ public class TelaSul extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(816, 636));
+        setPreferredSize(new java.awt.Dimension(816, 639));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -163,9 +163,9 @@ public class TelaSul extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnQuizLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 7, Short.MAX_VALUE)
                     .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 7, Short.MAX_VALUE)))
         );
 
         getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, 120));

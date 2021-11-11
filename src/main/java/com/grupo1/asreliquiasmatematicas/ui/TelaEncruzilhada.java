@@ -176,9 +176,9 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNorteActionPerformed
 
     private void btnOesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOesteActionPerformed
-//        TelaOeste oeste = new TelaOeste();
-//        oeste.setVisible(true);
-//        dispose();
+        TelaOeste oeste = new TelaOeste();
+        oeste.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnOesteActionPerformed
 
     private void btnBossFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBossFinalActionPerformed

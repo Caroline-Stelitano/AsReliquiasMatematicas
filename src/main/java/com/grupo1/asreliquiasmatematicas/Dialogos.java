@@ -42,5 +42,13 @@ public class Dialogos {
         "Argus: \nEntão este é o tal do Godolfredo… Já ouvi muito o seu nome e o caos que você causou com meus ajudantes, mas saiba que de mim o nível será mais baixo. Se prepare mentalmente, pois você terá pela frente o quiz do GRANDE ARGUS!",
         "Glados, Bowser, Robotinik, e Nemesis: VOCÊ VAI PERDER, LOOSER! HAHAHA!",
         "Godolfredo: \nMal espero para ver esse teste na minha frente! Me entregue logo! Tirarei de letra esse quiz! Estou mais preparado do que nunca!",};
-     
+
+    public String [] oeste = {
+        "Godolfredo: \nPorque será que vim parar aqui? Minha festa já era para ter começado e a esta altura a polícia já deve estar atrás de mim… Será que conseguirei ir até o fim desta jornada? Será que conseguirei voltar a casa?.",
+        "Godolfredo: \nEu já derrotei Robotinik, Nemesis, e Glados. Já cheguei até aqui e não vai ser aqui que desistirei. VOU SALVAR O REINO E VOLTAR PARA CASA!.",
+        "Godolfredo segue em direção ao Oeste muito confiante para enfrentar seu próximo desafio.",
+        "Chegando no Oeste, ele se depara com Arquimedes sobre controle mental.",
+        "Godolfredo: \nO ÍNCRIVEL ARQUIMEDES, NÃO ACREDITO NO QUE ESTOU VENDO! Te salvarei nem se tiver que fazer o teste 100 vezes! Lhe tirarei das garras desse mal que está te consumindo!",
+        "Arquimedes: \nVocê está chegando no fim da linha, seu fraco. DO MEU QUIZ VOCÊ NÃO PASSARÁ! PELA HONRA DE ARGUS!",
+    };
 }

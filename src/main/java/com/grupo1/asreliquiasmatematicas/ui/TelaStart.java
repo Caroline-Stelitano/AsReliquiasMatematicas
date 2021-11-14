@@ -47,7 +47,6 @@ public class TelaStart extends javax.swing.JFrame {
 
         btnStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogarFinal.png"))); // NOI18N
         btnStart.setBorder(null);
-        btnStart.setBorderPainted(false);
         btnStart.setContentAreaFilled(false);
         btnStart.setPreferredSize(new java.awt.Dimension(0, 0));
         btnStart.addActionListener(new java.awt.event.ActionListener() {

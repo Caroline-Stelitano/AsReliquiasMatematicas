@@ -28,11 +28,13 @@ public class TelaCreditos extends javax.swing.JFrame {
 
         btnCreditosVoltar = new javax.swing.JButton();
         btnCreditosSair = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCreditosVoltar.setText("voltar");
         btnCreditosVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -40,6 +42,7 @@ public class TelaCreditos extends javax.swing.JFrame {
                 btnCreditosVoltarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCreditosVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, -1, -1));
 
         btnCreditosSair.setText("sair");
         btnCreditosSair.addActionListener(new java.awt.event.ActionListener() {
@@ -47,38 +50,11 @@ public class TelaCreditos extends javax.swing.JFrame {
                 btnCreditosSairActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCreditosSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 216, -1, -1));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Malayalam Sangam MN", 0, 24)); // NOI18N
-        jLabel1.setText("DESENVOLVEDORES:");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 87, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCreditosVoltar)
-                        .addGap(470, 470, 470)
-                        .addComponent(btnCreditosSair)))
-                .addGap(0, 88, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 95, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(348, 348, 348)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreditosVoltar)
-                    .addComponent(btnCreditosSair))
-                .addGap(0, 96, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/creditos.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,5 +108,6 @@ public class TelaCreditos extends javax.swing.JFrame {
     private javax.swing.JButton btnCreditosSair;
     private javax.swing.JButton btnCreditosVoltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

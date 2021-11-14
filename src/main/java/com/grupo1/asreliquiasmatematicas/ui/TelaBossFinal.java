@@ -66,8 +66,8 @@ public class TelaBossFinal extends javax.swing.JFrame {
         btnResp3 = new javax.swing.JButton();
         btnResp4 = new javax.swing.JButton();
         lblVidas = new javax.swing.JLabel();
-        pnDialogo = new javax.swing.JPanel();
         btnNext = new javax.swing.JButton();
+        pnDialogo = new javax.swing.JPanel();
         cxDialogo = new javax.swing.JTextArea();
         background = new javax.swing.JLabel();
 
@@ -168,14 +168,16 @@ public class TelaBossFinal extends javax.swing.JFrame {
 
         getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, 120));
 
-        pnDialogo.setOpaque(false);
-
-        btnNext.setText(">");
+        btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placapassar.png"))); // NOI18N
+        btnNext.setContentAreaFilled(false);
         btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNextActionPerformed(evt);
             }
         });
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 60, -1));
+
+        pnDialogo.setOpaque(false);
 
         cxDialogo.setEditable(false);
         cxDialogo.setBackground(new java.awt.Color(0, 0, 0));
@@ -192,9 +194,7 @@ public class TelaBossFinal extends javax.swing.JFrame {
         pnDialogo.setLayout(pnDialogoLayout);
         pnDialogoLayout.setHorizontalGroup(
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
-                .addGap(0, 743, Short.MAX_VALUE)
-                .addComponent(btnNext))
+            .addGap(0, 784, Short.MAX_VALUE)
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -203,9 +203,7 @@ public class TelaBossFinal extends javax.swing.JFrame {
         );
         pnDialogoLayout.setVerticalGroup(
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnDialogoLayout.createSequentialGroup()
-                .addComponent(btnNext)
-                .addContainerGap(131, Short.MAX_VALUE))
+            .addGap(0, 160, Short.MAX_VALUE)
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
                     .addContainerGap(48, Short.MAX_VALUE)

@@ -65,8 +65,9 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         pnButtons.setOpaque(false);
 
-        btnNorte.setText("Reino do Norte");
+        btnNorte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinonorte.png"))); // NOI18N
         btnNorte.setToolTipText("");
+        btnNorte.setContentAreaFilled(false);
         btnNorte.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnNorte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,8 +75,9 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
             }
         });
 
-        btnSul.setText("Reino do Sul");
+        btnSul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinosul.png"))); // NOI18N
         btnSul.setToolTipText("");
+        btnSul.setContentAreaFilled(false);
         btnSul.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,23 +85,26 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
             }
         });
 
-        btnLeste.setText("Reino do Leste");
+        btnLeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinoleste.png"))); // NOI18N
+        btnLeste.setContentAreaFilled(false);
         btnLeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLesteActionPerformed(evt);
             }
         });
 
-        btnOeste.setText("Reino do Oeste");
+        btnOeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinooeste.png"))); // NOI18N
         btnOeste.setToolTipText("");
+        btnOeste.setContentAreaFilled(false);
         btnOeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOesteActionPerformed(evt);
             }
         });
 
-        btnBossFinal.setText("Boss Final");
+        btnBossFinal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placaboss.png"))); // NOI18N
         btnBossFinal.setToolTipText("");
+        btnBossFinal.setContentAreaFilled(false);
         btnBossFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBossFinalActionPerformed(evt);
@@ -126,14 +131,14 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         pnButtonsLayout.setVerticalGroup(
             pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnButtonsLayout.createSequentialGroup()
-                .addComponent(btnNorte, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(160, 160, 160)
+                .addComponent(btnNorte)
+                .addGap(141, 141, 141)
                 .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBossFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
-                .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOeste)
+                    .addComponent(btnLeste)
+                    .addComponent(btnBossFinal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(btnSul)
                 .addContainerGap())
         );
 

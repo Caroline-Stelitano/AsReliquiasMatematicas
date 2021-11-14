@@ -62,15 +62,15 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="btnNorte" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="btnNorte" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnOeste" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="btnLeste" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="btnBossFinal" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btnOeste" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnLeste" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnBossFinal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
-                  <Component id="btnSul" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                  <Component id="btnSul" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -79,8 +79,11 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnNorte">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reino do Norte"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/placareinonorte.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
           <Events>
@@ -89,8 +92,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnSul">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reino do Sul"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/placareinosul.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
           <Events>
@@ -99,7 +105,10 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLeste">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reino do Leste"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/placareinoleste.png"/>
+            </Property>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLesteActionPerformed"/>
@@ -107,8 +116,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnOeste">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Reino do Oeste"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/placareinooeste.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOesteActionPerformed"/>
@@ -116,8 +128,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnBossFinal">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Boss Final"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/placaboss.png"/>
+            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBossFinalActionPerformed"/>

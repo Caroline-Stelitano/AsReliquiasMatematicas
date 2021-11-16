@@ -17,7 +17,7 @@ public class Game {
     public boolean reliquiaLeste = true;
     public boolean reliquiaNorte = true;
     public boolean reliquiaSul = true;
-    public boolean reliquiaOeste = true; 
+    public boolean reliquiaOeste = true;  
 //    COLOCAR TUDO FALSE NO FUNCIONAMENTO DO JOGO
 
 }

@@ -66,15 +66,16 @@ public class TelaSucesso extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Voltar para a encruzilhada");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placavoltarencru.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
 
-        lblsuc4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV5.jpg"))); // NOI18N
+        lblsuc4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vv6.jpg"))); // NOI18N
         jPanel1.add(lblsuc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         lblsuc3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV3.jpg"))); // NOI18N

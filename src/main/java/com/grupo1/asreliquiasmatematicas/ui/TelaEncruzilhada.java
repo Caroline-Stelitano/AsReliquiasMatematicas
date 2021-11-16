@@ -151,7 +151,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Godolfredo: \"Que lugar é esse? Como vim parar aqui? Bem no dia do meu aniversário essas coisas acontecem!\"\n\nVoz do além: \"Grandioso Godolfredo, você será o responsável por salvar esse reino do grande mal que o assombra. Busque as relíquias matemáticas e encontrará sua volta pra casa! Siga para o Norte.\"\n\n");
+        jTextArea1.setText("Godolfredo: \"Que lugar é esse? Como vim parar aqui? Bem no dia do meu aniversário essas coisas acontecem!\"\nVoz do além: \"Grandioso Godolfredo, você será o responsável por salvar esse reino do grande mal que o assombra. Busque as relíquias matemáticas e encontrará sua volta pra casa! Siga para o Norte.\"\n\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setOpaque(false);
         getContentPane().add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 760, 110));

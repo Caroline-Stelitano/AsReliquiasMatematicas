@@ -155,7 +155,7 @@
         </Property>
         <Property name="lineWrap" type="boolean" value="true"/>
         <Property name="rows" type="int" value="5"/>
-        <Property name="text" type="java.lang.String" value="Godolfredo: &quot;Que lugar &#xe9; esse? Como vim parar aqui? Bem no dia do meu anivers&#xe1;rio essas coisas acontecem!&quot;&#xa;&#xa;Voz do al&#xe9;m: &quot;Grandioso Godolfredo, voc&#xea; ser&#xe1; o respons&#xe1;vel por salvar esse reino do grande mal que o assombra. Busque as rel&#xed;quias matem&#xe1;ticas e encontrar&#xe1; sua volta pra casa! Siga para o Norte.&quot;&#xa;&#xa;"/>
+        <Property name="text" type="java.lang.String" value="Godolfredo: &quot;Que lugar &#xe9; esse? Como vim parar aqui? Bem no dia do meu anivers&#xe1;rio essas coisas acontecem!&quot;&#xa;Voz do al&#xe9;m: &quot;Grandioso Godolfredo, voc&#xea; ser&#xe1; o respons&#xe1;vel por salvar esse reino do grande mal que o assombra. Busque as rel&#xed;quias matem&#xe1;ticas e encontrar&#xe1; sua volta pra casa! Siga para o Norte.&quot;&#xa;&#xa;"/>
         <Property name="wrapStyleWord" type="boolean" value="true"/>
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>

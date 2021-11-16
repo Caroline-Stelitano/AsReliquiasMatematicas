@@ -20,28 +20,28 @@ public class TelaSucesso extends javax.swing.JFrame {
         lblsuc2.setVisible(false);
         lblsuc3.setVisible(false);
         lblsuc4.setVisible(false);
+        lblsuc5.setVisible(false);
+       
         
         String mensagem;
         switch (local) {
             case "Norte":
                 lblsuc1.setVisible(true);
-                // trocar a imagem
                 break;
             case "Leste":
                 lblsuc2.setVisible(true);
-                // trocar a imagem
                 break;
             case "Oeste":
                 lblsuc3.setVisible(true);
-                // trocar a imagem
+                break;
+            case "Sul":
+                lblsuc4.setVisible(true);
                 break;
             default:
-                lblsuc4.setVisible(true);
-                // trocar a imagem
+                lblsuc5.setVisible(true);
+                jButton1.setVisible(false);
                 break;
         }
-        //ALTERAR MSG DE ULTIMA RELIQUIA DO BOSS???
-        //lblsuc1.setText(mensagem);
     }
 
     /**
@@ -55,6 +55,7 @@ public class TelaSucesso extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        lblsuc5 = new javax.swing.JLabel();
         lblsuc4 = new javax.swing.JLabel();
         lblsuc3 = new javax.swing.JLabel();
         lblsuc2 = new javax.swing.JLabel();
@@ -74,6 +75,9 @@ public class TelaSucesso extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
+
+        lblsuc5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fimdejogo.jpg"))); // NOI18N
+        jPanel1.add(lblsuc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         lblsuc4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vv6.jpg"))); // NOI18N
         jPanel1.add(lblsuc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -153,5 +157,6 @@ public class TelaSucesso extends javax.swing.JFrame {
     private javax.swing.JLabel lblsuc2;
     private javax.swing.JLabel lblsuc3;
     private javax.swing.JLabel lblsuc4;
+    private javax.swing.JLabel lblsuc5;
     // End of variables declaration//GEN-END:variables
 }

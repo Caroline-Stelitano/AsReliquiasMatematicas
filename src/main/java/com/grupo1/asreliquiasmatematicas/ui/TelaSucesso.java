@@ -16,27 +16,32 @@ public class TelaSucesso extends javax.swing.JFrame {
     public TelaSucesso(String local) {
         initComponents();
         
+        lblsuc1.setVisible(false);
+        lblsuc2.setVisible(false);
+        lblsuc3.setVisible(false);
+        lblsuc4.setVisible(false);
+        
         String mensagem;
         switch (local) {
             case "Norte":
-                mensagem = "Parabéns!\nVocê adquiriu a relíquia do norte.";
+                lblsuc1.setVisible(true);
                 // trocar a imagem
                 break;
             case "Leste":
-                mensagem = "Parabéns!\nVocê adquiriu a relíquia do leste.";
+                lblsuc2.setVisible(true);
                 // trocar a imagem
                 break;
             case "Oeste":
-                mensagem = "Parabéns!\nVocê adquiriu a relíquia do oeste.";
+                lblsuc3.setVisible(true);
                 // trocar a imagem
                 break;
             default:
-                mensagem = "Parabéns!\nVocê adquiriu a relíquia do sul.";
+                lblsuc4.setVisible(true);
                 // trocar a imagem
                 break;
         }
         //ALTERAR MSG DE ULTIMA RELIQUIA DO BOSS???
-        lblSucesso.setText(mensagem);
+        //lblsuc1.setText(mensagem);
     }
 
     /**
@@ -49,16 +54,17 @@ public class TelaSucesso extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblSucesso = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lblsuc4 = new javax.swing.JLabel();
+        lblsuc3 = new javax.swing.JLabel();
+        lblsuc2 = new javax.swing.JLabel();
+        lblsuc1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(819, 600));
         setMinimumSize(new java.awt.Dimension(819, 600));
 
-        lblSucesso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSucesso.setText("lblSucesso");
-        lblSucesso.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Voltar para a encruzilhada");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,35 +72,29 @@ public class TelaSucesso extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
-                .addComponent(lblSucesso, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(305, 305, 305)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(lblSucesso)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 429, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(56, 56, 56))
-        );
+        lblsuc4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV5.jpg"))); // NOI18N
+        jPanel1.add(lblsuc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        lblsuc3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV3.jpg"))); // NOI18N
+        jPanel1.add(lblsuc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        lblsuc2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV2.jpg"))); // NOI18N
+        jPanel1.add(lblsuc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        lblsuc1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblsuc1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VV1.jpg"))); // NOI18N
+        lblsuc1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(lblsuc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,6 +148,9 @@ public class TelaSucesso extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblSucesso;
+    private javax.swing.JLabel lblsuc1;
+    private javax.swing.JLabel lblsuc2;
+    private javax.swing.JLabel lblsuc3;
+    private javax.swing.JLabel lblsuc4;
     // End of variables declaration//GEN-END:variables
 }

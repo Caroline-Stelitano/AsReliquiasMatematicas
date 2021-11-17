@@ -40,7 +40,7 @@ public class TelaBossFinal extends javax.swing.JFrame {
         } else {
             boolean sucesso = quiz.update(jTextArea1, lblVidas,
                     btnResp1, btnResp2, btnResp3, btnResp4);
-//ALTERAR ESSA TELA PARA O FINAL DO JOGO??
+
             if (sucesso) {
                 Game.getInstance().reliquiaSul = true;
                 TelaSucesso ts = new TelaSucesso("de Nuzeilaond");
@@ -66,8 +66,8 @@ public class TelaBossFinal extends javax.swing.JFrame {
         btnResp3 = new javax.swing.JButton();
         btnResp4 = new javax.swing.JButton();
         lblVidas = new javax.swing.JLabel();
-        btnNext = new javax.swing.JButton();
         pnDialogo = new javax.swing.JPanel();
+        btnNext = new javax.swing.JButton();
         cxDialogo = new javax.swing.JTextArea();
         background = new javax.swing.JLabel();
 
@@ -168,6 +168,8 @@ public class TelaBossFinal extends javax.swing.JFrame {
 
         getContentPane().add(pnQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, 120));
 
+        pnDialogo.setOpaque(false);
+
         btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placapassar.png"))); // NOI18N
         btnNext.setContentAreaFilled(false);
         btnNext.addActionListener(new java.awt.event.ActionListener() {
@@ -175,9 +177,6 @@ public class TelaBossFinal extends javax.swing.JFrame {
                 btnNextActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 60, -1));
-
-        pnDialogo.setOpaque(false);
 
         cxDialogo.setEditable(false);
         cxDialogo.setBackground(new java.awt.Color(0, 0, 0));
@@ -194,7 +193,10 @@ public class TelaBossFinal extends javax.swing.JFrame {
         pnDialogo.setLayout(pnDialogoLayout);
         pnDialogoLayout.setHorizontalGroup(
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 784, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
+                .addContainerGap(713, Short.MAX_VALUE)
+                .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -203,7 +205,9 @@ public class TelaBossFinal extends javax.swing.JFrame {
         );
         pnDialogoLayout.setVerticalGroup(
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+            .addGroup(pnDialogoLayout.createSequentialGroup()
+                .addComponent(btnNext)
+                .addContainerGap(123, Short.MAX_VALUE))
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
                     .addContainerGap(48, Short.MAX_VALUE)
@@ -219,10 +223,6 @@ public class TelaBossFinal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        proximoDialogo();
-    }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnResp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResp1ActionPerformed
         quiz.responder("1");
@@ -243,6 +243,10 @@ public class TelaBossFinal extends javax.swing.JFrame {
         quiz.responder("4");
         updateScreen();
     }//GEN-LAST:event_btnResp4ActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        proximoDialogo();
+    }//GEN-LAST:event_btnNextActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;

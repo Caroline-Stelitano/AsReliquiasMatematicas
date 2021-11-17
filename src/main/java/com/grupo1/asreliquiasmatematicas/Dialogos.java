@@ -48,7 +48,7 @@ public class Dialogos {
         "Argus: \nSeu suposto salvador chegou, Pitágoras. Você o vê?",
         "Godolfredo: \nPITÁGORAS, VOCÊ SERÁ SALVO PELAS MÃOS E CÉREBRO DE GODOLFREDO. ARGUS, LIBERTE-O AGORA!",
         "Argus: \nEntão este é o tal do Godolfredo… Já ouvi muito o seu nome e o caos que você causou com meus ajudantes, mas saiba que de mim o nível será mais baixo. Se prepare mentalmente, pois você terá pela frente o quiz do GRANDE ARGUS!",
-        "Glados, Bowser, Robotinik, e Nemesis: VOCÊ VAI PERDER, LOOSER! HAHAHA!",
+        "Glados, Bowser, Robotinik, e Nemesis: VOCÊ VAI PERDER, LOSER! HAHAHA!",
         "Godolfredo: \nMal espero para ver esse teste na minha frente! Me entregue logo! Tirarei de letra esse quiz! Estou mais preparado do que nunca!",};
 
 }

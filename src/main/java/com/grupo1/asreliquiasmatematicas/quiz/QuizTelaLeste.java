@@ -51,7 +51,7 @@ public class QuizTelaLeste {
         quiz[6][3] = "acumuladoras";
         quiz[6][4] = "switch-case";
         quiz[6][5] = "2";
-        quiz[7][0] = "Na função function media(a, b) { … }; a e b são: ";
+        quiz[7][0] = "Na função void media(a, b) { … }; a e b são: ";
         quiz[7][1] = "classes";
         quiz[7][2] = "variáveis";
         quiz[7][3] = "funções";

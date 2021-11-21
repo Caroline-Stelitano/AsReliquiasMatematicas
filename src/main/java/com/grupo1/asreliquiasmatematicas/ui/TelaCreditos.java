@@ -37,6 +37,7 @@ public class TelaCreditos extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCreditosVoltar.setText("voltar");
+        btnCreditosVoltar.setFocusable(false);
         btnCreditosVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreditosVoltarActionPerformed(evt);
@@ -45,6 +46,7 @@ public class TelaCreditos extends javax.swing.JFrame {
         getContentPane().add(btnCreditosVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, -1, -1));
 
         btnCreditosSair.setText("sair");
+        btnCreditosSair.setFocusable(false);
         btnCreditosSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreditosSairActionPerformed(evt);

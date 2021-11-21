@@ -48,6 +48,7 @@ public class TelaStart extends javax.swing.JFrame {
         btnStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogarFinal.png"))); // NOI18N
         btnStart.setBorder(null);
         btnStart.setContentAreaFilled(false);
+        btnStart.setFocusable(false);
         btnStart.setPreferredSize(new java.awt.Dimension(0, 0));
         btnStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +59,7 @@ public class TelaStart extends javax.swing.JFrame {
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sairFinal.png"))); // NOI18N
         btnSair.setBorder(null);
         btnSair.setContentAreaFilled(false);
+        btnSair.setFocusable(false);
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
@@ -67,6 +69,7 @@ public class TelaStart extends javax.swing.JFrame {
         btnCreditos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/creditosFinal.png"))); // NOI18N
         btnCreditos.setBorder(null);
         btnCreditos.setContentAreaFilled(false);
+        btnCreditos.setFocusable(false);
         btnCreditos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreditosActionPerformed(evt);

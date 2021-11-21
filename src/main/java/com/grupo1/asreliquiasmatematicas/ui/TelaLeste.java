@@ -170,6 +170,7 @@ public class TelaLeste extends javax.swing.JFrame {
         btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placapassar.png"))); // NOI18N
         btnNext.setBorder(null);
         btnNext.setContentAreaFilled(false);
+        btnNext.setFocusable(false);
         btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNextActionPerformed(evt);

@@ -69,6 +69,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnNorte.setToolTipText("");
         btnNorte.setBorder(null);
         btnNorte.setContentAreaFilled(false);
+        btnNorte.setFocusable(false);
         btnNorte.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnNorte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +81,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnSul.setToolTipText("");
         btnSul.setBorder(null);
         btnSul.setContentAreaFilled(false);
+        btnSul.setFocusable(false);
         btnSul.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +92,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnLeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinoleste.png"))); // NOI18N
         btnLeste.setBorder(null);
         btnLeste.setContentAreaFilled(false);
+        btnLeste.setFocusable(false);
         btnLeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLesteActionPerformed(evt);
@@ -100,6 +103,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnOeste.setToolTipText("");
         btnOeste.setBorder(null);
         btnOeste.setContentAreaFilled(false);
+        btnOeste.setFocusable(false);
         btnOeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOesteActionPerformed(evt);
@@ -110,6 +114,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         btnBossFinal.setToolTipText("");
         btnBossFinal.setBorder(null);
         btnBossFinal.setContentAreaFilled(false);
+        btnBossFinal.setFocusable(false);
         btnBossFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBossFinalActionPerformed(evt);

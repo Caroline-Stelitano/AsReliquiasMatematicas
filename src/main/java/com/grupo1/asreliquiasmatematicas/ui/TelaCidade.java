@@ -38,6 +38,7 @@ public class TelaCidade extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placapassar.png"))); // NOI18N
+        btnNext.setBorder(null);
         btnNext.setContentAreaFilled(false);
         btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

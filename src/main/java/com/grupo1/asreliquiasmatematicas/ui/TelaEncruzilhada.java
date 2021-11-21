@@ -67,6 +67,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         btnNorte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinonorte.png"))); // NOI18N
         btnNorte.setToolTipText("");
+        btnNorte.setBorder(null);
         btnNorte.setContentAreaFilled(false);
         btnNorte.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnNorte.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +78,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         btnSul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinosul.png"))); // NOI18N
         btnSul.setToolTipText("");
+        btnSul.setBorder(null);
         btnSul.setContentAreaFilled(false);
         btnSul.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSul.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +88,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         });
 
         btnLeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinoleste.png"))); // NOI18N
+        btnLeste.setBorder(null);
         btnLeste.setContentAreaFilled(false);
         btnLeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +98,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         btnOeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinooeste.png"))); // NOI18N
         btnOeste.setToolTipText("");
+        btnOeste.setBorder(null);
         btnOeste.setContentAreaFilled(false);
         btnOeste.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +108,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
 
         btnBossFinal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placaboss.png"))); // NOI18N
         btnBossFinal.setToolTipText("");
+        btnBossFinal.setBorder(null);
         btnBossFinal.setContentAreaFilled(false);
         btnBossFinal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +142,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                     .addComponent(btnOeste)
                     .addComponent(btnLeste)
                     .addComponent(btnBossFinal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addComponent(btnSul)
                 .addContainerGap())
         );

@@ -209,15 +209,15 @@ public class TelaBossFinal extends javax.swing.JFrame {
             pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnDialogoLayout.createSequentialGroup()
                 .addComponent(btnNext)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
             .addGroup(pnDialogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDialogoLayout.createSequentialGroup()
-                    .addContainerGap(48, Short.MAX_VALUE)
+                    .addContainerGap(68, Short.MAX_VALUE)
                     .addComponent(cxDialogo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
-        getContentPane().add(pnDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 780, 160));
+        getContentPane().add(pnDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 780, 180));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Boss Final.png"))); // NOI18N
         background.setMaximumSize(new java.awt.Dimension(819, 600));

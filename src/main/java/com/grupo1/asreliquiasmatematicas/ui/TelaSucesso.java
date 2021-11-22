@@ -22,8 +22,6 @@ public class TelaSucesso extends javax.swing.JFrame {
         lblsuc4.setVisible(false);
         lblsuc5.setVisible(false);
        
-        
-        String mensagem;
         switch (local) {
             case "Norte":
                 lblsuc1.setVisible(true);

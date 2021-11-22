@@ -6,18 +6,20 @@ package com.grupo1.asreliquiasmatematicas;
 
 public class Game {
 
-    private static Game instance;
+    private static Game instance;   //instance é atributo da classe Game com tipo Game. 
+    
+    private Game(){}
 
-    public static Game getInstance() {
+    public static Game getInstance() {     //Game é o tipo do retorno do método getInstance()
         if (instance == null) {
-            instance = new Game();
+            instance = new Game();          // instance recebe new Game();
         }
         return instance;
     }
-    public boolean reliquiaLeste = true;
-    public boolean reliquiaNorte = true;
-    public boolean reliquiaSul = true;
-    public boolean reliquiaOeste = true;  
-//    COLOCAR TUDO FALSE NO FUNCIONAMENTO DO JOGO
+    public boolean reliquiaLeste = false;    //reliquiaLeste é um atributo da classe Game
+    public boolean reliquiaNorte = false;
+    public boolean reliquiaSul = false;
+    public boolean reliquiaOeste = false;  
+//    COLOCAR TUDO TRUE PARA TESTE
 
 }

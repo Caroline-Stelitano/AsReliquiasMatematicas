@@ -17,7 +17,14 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
      */
     public TelaEncruzilhada() {
         initComponents();
-
+        
+        /*
+            if (Game.getInstance().reliquiaNorte == false) {
+                btnLeste.setVisible(false);
+            }
+        se a condição for true ela esconde o botao. 
+        se a condiçao for false ela nao cai na condiçao e o botao continua visivel.
+        */
         boolean mostrarBotaoLeste = Game.getInstance().reliquiaNorte;
         if (!mostrarBotaoLeste) {
             btnLeste.setVisible(false);
@@ -37,7 +44,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         if (!mostrarBotaoBossFinal) {
             btnBossFinal.setVisible(false);
         }
-
+        
     }
 
     /**
@@ -64,6 +71,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnButtons.setOpaque(false);
+        pnButtons.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnNorte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinonorte.png"))); // NOI18N
         btnNorte.setToolTipText("");
@@ -76,6 +84,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnNorteActionPerformed(evt);
             }
         });
+        pnButtons.add(btnNorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, -20, 400, 146));
 
         btnSul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinosul.png"))); // NOI18N
         btnSul.setToolTipText("");
@@ -88,6 +97,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnSulActionPerformed(evt);
             }
         });
+        pnButtons.add(btnSul, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 359, 150, 75));
 
         btnLeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinoleste.png"))); // NOI18N
         btnLeste.setBorder(null);
@@ -98,6 +108,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnLesteActionPerformed(evt);
             }
         });
+        pnButtons.add(btnLeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 150, 75));
 
         btnOeste.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placareinooeste.png"))); // NOI18N
         btnOeste.setToolTipText("");
@@ -109,6 +120,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnOesteActionPerformed(evt);
             }
         });
+        pnButtons.add(btnOeste, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 150, 75));
 
         btnBossFinal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/placaboss.png"))); // NOI18N
         btnBossFinal.setToolTipText("");
@@ -120,37 +132,7 @@ public class TelaEncruzilhada extends javax.swing.JFrame {
                 btnBossFinalActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout pnButtonsLayout = new javax.swing.GroupLayout(pnButtons);
-        pnButtons.setLayout(pnButtonsLayout);
-        pnButtonsLayout.setHorizontalGroup(
-            pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnButtonsLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnButtonsLayout.createSequentialGroup()
-                        .addComponent(btnOeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(139, 139, 139)
-                        .addComponent(btnBossFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnNorte, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
-                .addComponent(btnLeste, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-        );
-        pnButtonsLayout.setVerticalGroup(
-            pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnButtonsLayout.createSequentialGroup()
-                .addComponent(btnNorte)
-                .addGap(141, 141, 141)
-                .addGroup(pnButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOeste)
-                    .addComponent(btnLeste)
-                    .addComponent(btnBossFinal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
-                .addComponent(btnSul)
-                .addContainerGap())
-        );
+        pnButtons.add(btnBossFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, 75));
 
         getContentPane().add(pnButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 800, 440));
 
